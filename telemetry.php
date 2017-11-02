@@ -4,11 +4,12 @@ $db_type="mysql"; //Type db mysql or sqlite
 $ip=($_SERVER['REMOTE_ADDR']);
 $ua=($_SERVER['HTTP_USER_AGENT']);
 $lang=($_SERVER['HTTP_ACCEPT_LANGUAGE']);
-$dl=($_POST["dl"]);
-$ul=($_POST["ul"]);
-$ping=($_POST["ping"]);
-$jitter=($_POST["jitter"]);
-$log=($_POST["log"]);
+
+$dl     = (isset($_POST["dl"]))?$_POST["dl"]:null;
+$ul     = (isset($_POST["ul"]))?$_POST["ul"]:null;
+$ping   = (isset($_POST["ping"]))?$_POST["ping"]:null;
+$jitter = (isset($_POST["jitter"]))?$_POST["jitter"]:null;
+$log    = (isset($_POST["log"]))?$_POST["log"]:null;
 
 if($db_type=="mysql"){
         $MySql_username="USERNAME";
